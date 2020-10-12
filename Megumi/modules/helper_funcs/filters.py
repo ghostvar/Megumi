@@ -6,6 +6,8 @@ from telegram.ext import BaseFilter
 class CustomFilters(object):
 
     class _Supporters(BaseFilter):
+        def __call__(self, mimetype):
+            None 
 
         def filter(self, message: Message):
             return bool(message.from_user and
@@ -14,6 +16,8 @@ class CustomFilters(object):
     support_filter = _Supporters()
 
     class _Sudoers(BaseFilter):
+        def __call__(self, mimetype):
+            None 
 
         def filter(self, message: Message):
             return bool(message.from_user and
@@ -22,6 +26,8 @@ class CustomFilters(object):
     sudo_filter = _Sudoers()
 
     class _Developers(BaseFilter):
+        def __call__(self, mimetype):
+            None 
 
         def filter(self, message: Message):
             return bool(message.from_user and message.from_user.id in DEV_USERS)
@@ -41,6 +47,8 @@ class CustomFilters(object):
     mime_type = _MimeType
 
     class _HasText(BaseFilter):
+        def __call__(self, mimetype):
+            None 
 
         def filter(self, message: Message):
             return bool(message.text or message.sticker or message.photo or

@@ -27,3 +27,5 @@ alphabet_detector
 nekos.py
 fontTools
 psutil
+gTTs
+tswift
